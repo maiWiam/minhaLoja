@@ -11,6 +11,6 @@ class Produto
     {
         $this->nome = $attributes['nome'] ?? null;
         $this->preco = $attributes['preco'] ?? null;
-        
     }
 }
+

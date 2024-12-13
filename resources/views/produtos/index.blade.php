@@ -14,7 +14,6 @@
                 <tr>
                     <th>Nome</th>
                     <th>Preço</th>
-                    <th>Descrição</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,7 +21,7 @@
                     <tr>
                         <td>{{ $produto->nome }}</td>
                         <td>R$ {{ number_format($produto->preco, 2, ',', '.') }}</td>
-                                        </tr>
+                    </tr>
                 @endforeach
             </tbody>
         </table>
