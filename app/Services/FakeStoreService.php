@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Services; // Assumindo que o serviço esteja no namespace App\Services
+namespace App\Services;
 
 use GuzzleHttp\Client;
-use App\Models\Produto; // Substitua 'App\Models' pelo namespace correto do seu modelo
+use App\Models\Produto;
 
 class FakeStoreService
 {

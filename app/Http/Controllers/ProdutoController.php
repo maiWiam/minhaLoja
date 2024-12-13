@@ -1,15 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Prod;
-use Illuminate\Http\Request;
-use App\Services\FakeStoreService; 
+
+use App\Services\FakeStoreService;
 
 class ProdutoController extends Controller
 {
+    protected $fakeStoreService;
+
+    public function __construct(FakeStoreService $fakeStoreService)
+    {
+        $this->fakeStoreService = $fakeStoreService;
+    }
+
     public function index()
     {
-        $produtos = resolve(FakeStoreService::class)->getProdutos();
-        return view('produtos', compact('produtos'));
+        $produtos = $this->fakeStoreService->getProdutos();
+        return view('produtos.index', compact('produtos'));
     }
 }
