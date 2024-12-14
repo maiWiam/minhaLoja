@@ -4,6 +4,7 @@ namespace App\Models;
 
 class Produto
 {
+    public $id;
     public $nome;
     public $preco;
     public $descricao;
@@ -14,6 +15,7 @@ class Produto
 
     public function __construct(array $attributes = [])
     {
+        $this->id = $attributes['id'] ?? null;
         $this->nome = $attributes['nome'] ?? null;
         $this->preco = $attributes['preco'] ?? null;
         $this->descricao = $attributes['descricao'] ?? null;
