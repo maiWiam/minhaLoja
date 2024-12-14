@@ -16,6 +16,11 @@ class FakeStoreService
             return new Produto([
                 'nome' => $produto['title'],
                 'preco' => $produto['price'],
+                'descricao' => $produto['description'], 
+                'categoria' => $produto['category'],   
+                'imagem' => $produto['image'],         
+                'avaliacao' => $produto['rating']['rate'], 
+                'num_avaliacoes' => $produto['rating']['count'],  
             ]);
         });
 
